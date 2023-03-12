@@ -1,13 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-
 }
-
-.image1 {
-    margin: auto;
-}
-
 
 .line {
     display: inline;
@@ -222,4 +216,36 @@ label:hover {
 
 #fourth-meme:hover+label>.arrow {
     transform: rotate(90deg);
+}
+
+@media (19rem < width < 37rem ) {
+    h1 {
+        font-size: 2rem;
+    }
+    .line {
+        font-size: 1.5rem;
+        padding-left: 0.5rem;
+        color: black;
+    }
+    .memes .arrow {
+        visibility: visible;
+    }
+}
+@media (37rem < width < 75rem) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .line {
+        font-size: 1.8rem;
+        color: black;
+    }
+    .memes .arrow {
+        visibility: visible;
+    }
+}
+
+@media (75rem < width < 150rem) {
+    .image1, .image2, .image3, .image4 {
+        padding-left: 10%;
+    }
 }
