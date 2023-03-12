@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+.image {
+    margin: auto;
+}
+
+
+.line {
+    display: inline;
+    font-size: 2rem;
+    font-weight: bold;
+    color: blue;
+    transition: color 1s;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-top: 0.6rem solid transparent;
+    border-bottom: 0.6rem solid transparent;
+    border-left: 0.6rem solid black;
+    transition: transform 0.5s, visibility 0s;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 0;
+    visibility: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: auto;
+    width: 30%;
+    padding: 2rem 0 0 0;
+    border-bottom: 0.2rem solid black;
+}
+
+.memes {
+    width: 30%;
+    margin: auto;
+    min-width: 20rem;
+    padding-top: 1.5rem;
+}
+
+.memes:hover .line {
+    color: black;
+}
+
+.memes:hover .arrow {
+    visibility: visible;
+}
+
+
+/*first*/
+#first-meme,
+.image {
+    display: none;
+}
+
+#first-meme:hover+label>div>.image {
+    display: block;
+
+}
+
+#first-meme:checked+label>div>.image {
+    display: block;
+}
+
+#first-meme:checked+label>.line {
+    color: black;
+}
+
+#first-meme:hover+label>.line {
+    color: black;
+}
+
+#first-meme:checked+label>.arrow {
+    transform: rotate(90deg);
+}
+
+#first-meme:hover+label>.arrow {
+    transform: rotate(90deg);
+}
+
+/*second*/
+#second-meme,
+.image {
+    display: none;
+}
+
+#second-meme:hover+label>div>.image {
+    display: block;
+
+}
+
+#second-meme:checked+label>div>.image {
+    display: block;
+}
+
+#second-meme:checked+label>.line {
+    color: black;
+}
+
+#second-meme:hover+label>.line {
+    color: black;
+}
+
+#second-meme:checked+label>.arrow {
+    transform: rotate(90deg);
+}
+
+#second-meme:hover+label>.arrow {
+    transform: rotate(90deg);
+}
+
+/*third*/
+#third-meme,
+.image {
+    display: none;
+}
+
+#third-meme:hover+label>div>.image {
+    display: block;
+
+}
+
+#third-meme:checked+label>div>.image {
+    display: block;
+}
+
+#third-meme:checked+label>.line {
+    color: black;
+}
+
+#third-meme:hover+label>.line {
+    color: black;
+}
+
+#third-meme:checked+label>.arrow {
+    transform: rotate(90deg);
+}
+
+#third-meme:hover+label>.arrow {
+    transform: rotate(90deg);
+}
+
+/*fourth*/
+#fourth-meme,
+.image {
+    display: none;
+}
+
+#fourth-meme:hover+label>div>.image {
+    display: block;
+}
+
+#fourth-meme:checked+label>div>.image {
+    display: block;
+}
+
+#fourth-meme:checked+label>.line {
+    color: black;
+}
+
+#fourth-meme:hover+label>.line {
+    color: black;
+}
+
+#fourth-meme:checked+label>.arrow {
+    transform: rotate(90deg);
+}
+
+#fourth-meme:hover+label>.arrow {
+    transform: rotate(90deg);
+}
