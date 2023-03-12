@@ -65,6 +65,10 @@ h1 {
     visibility: visible;
 }
 
+label:hover {
+    cursor: pointer;
+}
+
 /*first*/
 #first-meme {
     display: none;
@@ -103,6 +107,7 @@ h1 {
 #first-meme:hover+label>.arrow {
     transform: rotate(90deg);
 }
+
 
 /*second*/
 #second-meme {
