@@ -1,27 +1,20 @@
-* {
-    padding: 0;
-    margin: 0;
+h1 {
+    font-size: 3rem;
 }
 
 .line {
-    display: inline;
     font-size: 2rem;
     font-weight: bold;
     color: blue;
-    transition: color 1s;
+    transition: color 0.5s;
+    padding-left: 0.5rem;
 }
 
-.line1{
-    padding-right: 50%;
-}
-.line2{
-    padding-right: 51%;
-}
-.line3{
-    padding-right: 52%;
-}
-.line4{
-    padding-right: 52%;
+.stickers {
+    display: flex;
+    flex-direction: column;
+    min-width: 20rem;
+    gap: 1rem;
 }
 
 .arrow {
@@ -32,220 +25,112 @@
     border-left: 0.6rem solid black;
     transition: transform 1s, visibility 0s;
     display: inline-block;
-    margin-left: auto;
-    margin-right: 0;
     visibility: hidden;
 }
 
-h1 {
-    font-size: 3rem;
-    margin: auto;
-    width: 30%;
-    padding: 2rem 0 0 0;
+.sticker-name {
+    display: flex;
+    justify-content: space-between;
 }
 
-.memes {
-    width: 30%;
-    margin: auto;
-    min-width: 20rem;
-    padding-top: 1.5rem;
+#first-sticker,
+#second-sticker,
+#third-sticker,
+#fourth-sticker {
+    display: none;
 }
 
-.memes:hover .line {
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.sticker-image {
+    display: flex;
+    justify-content: center;
+}
+
+.image1,
+.image2,
+.image3,
+.image4 {
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 2s, max-height 0s;
+}
+
+.sticker:hover img {
+    opacity: 1;
+    max-height: 100%;
+}
+
+.input:checked+label>div.sticker-image>img {
+    opacity: 1;
+    max-height: 100%;
+}
+
+.sticker:hover .arrow {
+    transform: rotate(90deg);
+}
+
+.input:checked+label>div.sticker-name>div.arrow {
+    transform: rotate(90deg);
+}
+
+.stickers:hover>.sticker>.input+label>div.sticker-name>div.arrow {
+    visibility: visible;
+    transition: border-left 0.5s;
+}
+
+.stickers:hover>.sticker>.input+label>div.sticker-name>div.line {
+    color: black;
+    transition: color 0.5s;
+}
+
+.input:checked+label>div.sticker-name>div.line {
     color: black;
 }
 
-.memes:hover .arrow {
-    visibility: visible;
+.stickers>.sticker:active>.input+label>div.sticker-name>div.line {
+    color: blue;
+}
+
+.stickers>.sticker:active>.input+label>div.sticker-name>div.arrow {
+    border-left: 0.6rem solid blue;
 }
 
 label:hover {
     cursor: pointer;
 }
 
-/*first*/
-#first-meme {
-    display: none;
-    max-width: 30rem;
-}
-
-.image1 {
-    max-height: 0;
-    opacity: 0;
-    transition: opacity 1.5s, max-height 0s;
-
-}
-
-#first-meme:hover+label>div>.image1 {
-    opacity: 1;
-    max-height: 100%;
-}
-
-#first-meme:checked+label>div>.image1 {
-    opacity: 1;
-    max-height: 100%;
-}
-
-#first-meme:checked+label>.line {
-    color: black;
-}
-
-#first-meme:hover+label>.line {
-    color: black;
-}
-
-#first-meme:checked+label>.arrow {
-    transform: rotate(90deg);
-}
-
-#first-meme:hover+label>.arrow {
-    transform: rotate(90deg);
-}
-
-
-/*second*/
-#second-meme {
-    display: none;
-}
-
-.image2 {
-    max-height: 0;
-    opacity: 0;
-    transition: opacity 1.5s, max-height 0s;
-
-}
-
-#second-meme:hover+label>div>.image2 {
-    opacity: 1;
-    max-height: 100%;
-}
-
-#second-meme:checked+label>div>.image2 {
-    opacity: 1;
-    max-height: 100%;
-}
-
-#second-meme:checked+label>.line {
-    color: black;
-}
-
-#second-meme:hover+label>.line {
-    color: black;
-}
-
-#second-meme:checked+label>.arrow {
-    transform: rotate(90deg);
-}
-
-#second-meme:hover+label>.arrow {
-    transform: rotate(90deg);
-}
-
-/*third*/
-#third-meme {
-    display: none;
-}
-
-.image3 {
-    max-height: 0;
-    opacity: 0;
-    transition: opacity 1.5s, max-height 0s;
-
-}
-
-#third-meme:hover+label>div>.image3 {
-    opacity: 1;
-    max-height: 100%;
-}
-
-#third-meme:checked+label>div>.image3 {
-    opacity: 1;
-    max-height: 100%;
-}
-
-#third-meme:checked+label>.line {
-    color: black;
-}
-
-#third-meme:hover+label>.line {
-    color: black;
-}
-
-#third-meme:checked+label>.arrow {
-    transform: rotate(90deg);
-}
-
-#third-meme:hover+label>.arrow {
-    transform: rotate(90deg);
-}
-
-/*fourth*/
-#fourth-meme {
-    display: none;
-}
-
-.image4 {
-    max-height: 0;
-    opacity: 0;
-    margin: auto;
-    transition: opacity 1.5s, max-height 0s;
-
-}
-
-#fourth-meme:hover+label>div>.image4 {
-    opacity: 1;
-    max-height: 100%;
-}
-
-#fourth-meme:checked+label>div>.image4 {
-    opacity: 1;
-    max-height: 100%;
-}
-
-#fourth-meme:checked+label>.line {
-    color: black;
-}
-
-#fourth-meme:hover+label>.line {
-    color: black;
-}
-
-#fourth-meme:checked+label>.arrow {
-    transform: rotate(90deg);
-}
-
-#fourth-meme:hover+label>.arrow {
-    transform: rotate(90deg);
-}
-
-@media (19rem < width < 37rem ) {
+@media (19rem < width < 37rem) {
     h1 {
         font-size: 2rem;
     }
+
     .line {
         font-size: 1.5rem;
-        padding-left: 0.5rem;
         color: black;
     }
-    .memes .arrow {
+
+    .stickers>.sticker>.input+label>div.sticker-name>div.arrow {
         visibility: visible;
     }
 }
+
 @media (37rem < width < 75rem) {
     h1 {
         font-size: 2.5rem;
     }
+
     .line {
         font-size: 1.8rem;
         color: black;
     }
-    .memes .arrow {
-        visibility: visible;
-    }
-}
 
-@media (75rem < width < 150rem) {
-    .image1, .image2, .image3, .image4 {
-        padding-left: 10%;
+    .stickers>.sticker>.input+label>div.sticker-name>div.arrow {
+        visibility: visible;
     }
 }
