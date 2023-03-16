@@ -1,0 +1,147 @@
+h1 {
+    font-size: 3rem;
+}
+
+.line {
+    font-size: 2rem;
+    font-weight: bold;
+    color: blue;
+    transition: color 0.5s;
+}
+
+.stickers {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    width: 100%;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-top: 0.6rem solid transparent;
+    border-bottom: 0.6rem solid transparent;
+    border-left: 0.6rem solid black;
+    transition: transform 1s, visibility 0s;
+    display: inline-block;
+    visibility: hidden;
+}
+
+.sticker-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+#first-sticker,
+#second-sticker,
+#third-sticker,
+#fourth-sticker {
+    display: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.sticker-image {
+    display: flex;
+    justify-content: center;
+}
+
+.image1,
+.image2,
+.image3,
+.image4 {
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 2s, max-height 0s;
+}
+
+.sticker:hover img {
+    opacity: 1;
+    max-height: 100%;
+}
+
+.input:checked+label>div.sticker-image>img {
+    opacity: 1;
+    max-height: 100%;
+}
+
+.sticker:hover .arrow {
+    transform: rotate(90deg);
+}
+
+.input:checked+label>div.sticker-name>div.arrow {
+    transform: rotate(90deg);
+}
+
+.stickers:hover>.sticker>.input+label>div.sticker-name>div.arrow {
+    visibility: visible;
+    transition: border-left 0.5s;
+}
+
+.stickers:hover>.sticker>.input+label>div.sticker-name>div.line {
+    color: black;
+    transition: color 0.5s;
+}
+
+.input:checked+label>div.sticker-name>div.line {
+    color: black;
+}
+
+.stickers>.sticker:active>.input+label>div.sticker-name>div.line {
+    color: blue;
+}
+
+.stickers>.sticker:active>.input+label>div.sticker-name>div.arrow {
+    border-left: 0.6rem solid blue;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+@media (19rem < width < 37rem) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .line {
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    .stickers>.sticker>.input+label>div.sticker-name>div.arrow {
+        visibility: visible;
+    }
+}
+
+@media (37rem < width < 75rem) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .line {
+        font-size: 1.8rem;
+        color: black;
+    }
+
+    .stickers>.sticker>.input+label>div.sticker-name>div.arrow {
+        visibility: visible;
+    }
+}
+
+@media (hover: none) {
+    .stickers>.sticker>.input+label>div.sticker-name>div.arrow {
+        visibility: visible;
+    }
+    
+    .line {
+        color: black;
+    }
+}
