@@ -7,14 +7,15 @@ h1 {
     font-weight: bold;
     color: blue;
     transition: color 0.5s;
-    padding-left: 0.5rem;
 }
 
 .stickers {
     display: flex;
     flex-direction: column;
-    min-width: 20rem;
+    max-width: 40rem;
+    width: 100%;
     gap: 1rem;
+    padding: 0 1rem;
 }
 
 .arrow {
@@ -132,5 +133,15 @@ label:hover {
 
     .stickers>.sticker>.input+label>div.sticker-name>div.arrow {
         visibility: visible;
+    }
+}
+
+@media (hover: none) {
+    .stickers>.sticker>.input+label>div.sticker-name>div.arrow {
+        visibility: visible;
+    }
+    
+    .line {
+        color: black;
     }
 }
